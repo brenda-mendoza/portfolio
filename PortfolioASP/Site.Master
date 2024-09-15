@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="PortfolioASP.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Brenda Portfolio </title>
+
+    <link href="Content/styles.css" rel="stylesheet" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=DM+Serif+Text&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <form ID="MasterForm" runat="server">
+        <!-- cabecera + logo + nav menu-->
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a runat="server" href="~/">Home</a></li>
+                   <%-- <li><a runat="server" href="~/about">About me</a></li>--%>
+                    <li><a runat="server" href="~/Projects.aspx">Projects</a></li>
+                    <li><a runat="server" href="~/Skills.aspx">Skills</a></li>
+                    <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+             
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer>
+                <h3>&copy; 2024 Brenda's Portfolio</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/brenda-d-mendoza" target="_blank">
+                        <img src="img/linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/brenda-mendoza" target="_blank">
+                        <img src="img/github-icon.png" alt="GitHub">
+                    </a>
+                </div>
+                <p>
+                    <a href="https://www.freepik.com/author/juicy-fish/icons/">Icons by juicy_fish</a>
+                </p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
